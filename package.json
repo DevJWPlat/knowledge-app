@@ -1,0 +1,20 @@
+{
+  "name": "knowledge-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @knowledge/web",
+    "dev:api": "npm run dev --workspace @knowledge/api",
+    "build:web": "npm run build --workspace @knowledge/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "db:migrate:local": "npm run db:migrate:local --workspace @knowledge/api"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
